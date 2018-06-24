@@ -1,4 +1,4 @@
-def iterPower(base, exp):
+def recurPower(base, exp):
     '''
     base: int or float.
     exp: int >= 0
@@ -8,8 +8,9 @@ def iterPower(base, exp):
     # Your code here
     if exp==1:
         return base
+    elif exp==0:
+        return 1
     else:
         exp-=1
-        return base*iterPower(base, exp)
+        return base*recurPower(base, exp)
 
-print(iterPower(2,6))
