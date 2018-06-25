@@ -25,16 +25,17 @@ Game over. Your secret number was: 83
 print("Please think of a number between 0 and 100!")
 high = 100
 low = 0
-mid = (high+low)/2
+mid = (high+low)//2
 while True:
-    print('is your secret number', mid)
-    ip = input("Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly.")
+    print('Is your secret number '+str(mid)+'?')
+    ip = input("Enter 'h' to indicate the guess is too high. Enter 'l' to indicate the guess is too low. Enter 'c' to indicate I guessed correctly. ")
     if ip == "h":
         high = mid
     elif ip == "l":
         low = mid
     elif ip == "c":
-        print("Is your secret number",mid)
+        print("Game over. Your secret number was: ",mid)
+        break
     else:
         print("Sorry, I did not understand your input.")
-    mid = (high+low)/2
+    mid = (high+low)//2
