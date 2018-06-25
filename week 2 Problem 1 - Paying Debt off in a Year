@@ -1,0 +1,13 @@
+# Paste your code into this box
+'''
+balance = input()
+annualInterestRate = input()
+monthlyPaymentRate = input()
+'''
+i = 12
+while i>0:
+    ap = balance - (balance*monthlyPaymentRate)
+    balance = ap + (ap*annualInterestRate)/12
+    i-=1
+    round(balance,2)
+print(round(balance,2))
