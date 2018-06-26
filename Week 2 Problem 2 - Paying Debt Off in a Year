@@ -1,0 +1,12 @@
+fixed = 10
+sBalance = balance
+while balance>0:
+    for i in range(12):
+        ap = balance - fixed
+        balance = ap + ((ap*annualInterestRate)/12)
+    if balance > 0:
+        fixed+=10
+        balance = sBalance
+    elif balance < 0:
+        break
+print(fixed)
