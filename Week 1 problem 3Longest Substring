@@ -1,0 +1,15 @@
+def pattern(word):
+	newWord = word[0]
+	maxlength = 0
+	recent = word[0]
+
+	for n in range(len(word)-1):
+		if word[n+1] >= word[n]:
+			newWord += word[n+1]
+			if len(newWord) >= maxlength:
+				maxlength = len(newWord)
+				recent = newWord
+		else:
+			newWord = word[n+1]
+	return recent
+print(pattern('abcaghklbcdefghijklm'))
